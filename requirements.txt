@@ -1,0 +1,31 @@
+# ----------------------------
+# Airflow (orchestration layer)
+# ----------------------------
+apache-airflow==3.0.0
+apache-airflow-providers-apache-spark
+apache-airflow-providers-databricks
+
+# ----------------------------
+# Spark execution layer
+# ----------------------------
+pyspark>=3.4,<4.0
+delta-spark>=3.0,<4.0
+
+# ----------------------------
+# Data quality
+# ----------------------------
+great_expectations>=0.15,<1.0
+
+# ----------------------------
+# Utilities
+# ----------------------------
+python-dateutil>=2.8
+
+# ----------------------------
+# Testing (not used by Airflow runtime, but OK for repo)
+# ----------------------------
+pytest>=7.0,<9.0
+
+pyarrow>=11.0,<13.0
+
+pandas>=2.0,<3.0
