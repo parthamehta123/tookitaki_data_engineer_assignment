@@ -12,7 +12,7 @@ Key guarantees:
 - Idempotent re-runs (safe for retries, backfills, and restarts)
 - Correct handling of duplicate records
 - Soft deletes are handled as state transitions rather than physical deletes. The deduplication logic selects the
-  latest record per business key, so if the most recent event represents a deletion (is_deleted = true), that state
+  latest record per business key, so if the most recent event represents a deletion (`is_deleted = true`), that state
   is preserved downstream. The merge logic remains idempotent and retry-safe.
 
 The job is designed to run in:
